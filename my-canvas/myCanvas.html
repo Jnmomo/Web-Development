@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<title>Assignment4-Mojin Zhang</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+
+			#myCanvas {	
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;	
+				width: 100%;
+				height: 100%;
+			}
+
+			@media only screen and (max-width: 600px) {
+				#myCanvas {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="myCanvas"></canvas>
+
+		<script>
+			
+			// create a pattern and use pattern to fill the canvas:
+			patternCanvas = document.createElement('canvas');
+			patternContext = patternCanvas.getContext('2d');
+			patternCanvas.width = 500;
+			patternCanvas.height = 350;
+
+			patternContext.fillStyle = "orange";
+			patternContext.fillRect(50, 50, 150, 50);
+			patternContext.fillRect(100, 0, 50, 150);
+
+			patternContext.fillStyle = "black";
+			patternContext.fillRect(150, 100, 150, 50);
+			patternContext.fillRect(200, 50, 50, 150);
+
+			patternContext.fillStyle = "green";
+			patternContext.fillRect(250, 150, 150, 50);
+			patternContext.fillRect(300, 100, 50, 150);
+
+			patternContext.fillStyle = "darkred";
+			patternContext.fillRect(50, 100, 50, 150);
+			patternContext.fillRect(0, 150, 150, 50);
+
+			patternContext.fillStyle = "blue";
+			patternContext.fillRect(150, 150, 50, 150);
+			patternContext.fillRect(100, 200, 150, 50);
+
+			patternContext.fillStyle = "yellow";
+			patternContext.fillRect(250, 200, 50, 150);
+			patternContext.fillRect(200, 250, 150, 50);
+			
+			// create the canvas that needs to be filled
+			canvas = document.getElementById("myCanvas");
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			context = canvas.getContext('2d');
+
+			// fill the canvas
+			pattern = context.createPattern(patternCanvas, 'no-repeat');
+			context.fillStyle = pattern;
+			context.fillRect(0, 0, canvas.width, canvas.height);
+
+			// here is the part that I might need better coding skill
+			// to polish. But I just translate the pattern and try to 
+			// fill the whole canvas using for loops
+			
+			for (var i = 1; i <= 4; i++) {
+				context.translate(300, 150);
+				context.fillRect(0, 0, canvas.width, canvas.height);
+			}
+
+			context.translate(-1100, -800);
+			context.fillRect(0, 0, canvas.width, canvas.height);
+
+			for (var i = 1; i <= 4; i++) {
+				context.translate(300, 150);
+				context.fillRect(0, 0, canvas.width, canvas.height);
+			}
+
+			context.translate(-700, -600);
+			context.fillRect(0, 0, canvas.width, canvas.height);
+			
+			for (var i = 1; i < 4; i++) {
+				context.translate(300, 150);
+				context.fillRect(0, 0, canvas.width, canvas.height);
+			}
+
+			context.translate(-400, -450);
+			context.fillRect(0, 0, canvas.width, canvas.height);
+
+			context.translate(300, 150);
+			context.fillRect(0, 0, canvas.width, canvas.height);
+
+			context.translate(-1500, 250);
+			context.fillRect(0, 0, canvas.width, canvas.height);
+		
+			for (var i = 1; i <= 4; i++) {
+				context.translate(300, 150);
+				context.fillRect(0, 0, canvas.width, canvas.height);
+			}
+
+			context.translate(-1200, -350);
+			context.fillRect(0, 0, canvas.width, canvas.height);
+
+			context.translate(300, 150);
+			context.fillRect(0, 0, canvas.width, canvas.height);
+
+			context.translate(-500, -750);
+			context.fillRect(0, 0, canvas.width, canvas.height);
+		
+		</script>
+		
+	</body>
+</html>
