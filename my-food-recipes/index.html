@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+	</head>
+
+	<body>
+		<header class="head">
+			<h1>Comfort Food Recipes</h1>
+			<br>
+		</header>
+
+		<div class="container">
+			<div class="foodPic" style="background-image: url(pic/Julie&Julia.jpg)">
+				<div>
+					This is a screenshot of my favorite line from the movie Julie & Julia.
+					<br>
+					<br>
+					I enjoy cooking and eating a lot, especially during the time when I study and work abroad.
+					<br>
+					<br>
+					Here are some of my favorite food to make and trust me, eating well can really comfort you and heal you from a bad day.
+					<br>
+					<br>
+					Hope you enjoy the recipes and definitely do have a try!
+				</div>
+			</div>
+
+			<div class="foodPic" style="background-image: url(pic/curry.jpg)">
+				<div>
+					Curry with Fried Pork Cutlet<hr>
+					What you need: potato, carrot, bell pepper, pork or chicken, eggs, flour, bread crumbs, curry cubes.
+					<br>
+					<br>
+					1. Marinate meat in salt and pepper for 2 hours.
+					<br>
+					<br>
+					2. Coat meat with flour first, then dip into eggs, then dredge in bread crumbs to coat evenly.
+					<br>
+					<br>
+					3. Heat oil in a non-sticky pan to medium heat, add meat to the pan to cook until it turns golden brown(about 3 minutes per side).
+					<br>
+					<br>
+					4. Chop your veggies to bitable size, add oil to the pan and stir-fry the vegetables for couple minutes.
+					<br>
+					<br>
+					5. Add water, add curry cubes depending on your serving size, turn heat to medium to low, keep stiring.
+					<br>
+					<br>
+					6. When your curry turns sticky, it's ready to serve, with pork cutlet and cooked rice.
+				</div>
+			</div>
+
+			<div class="foodPic" style="background-image: url(pic/workfood.png)">
+				<div>
+					My Work Food<hr>
+					This is my tax season surviving lunch when I worked at a CPA firm. What you need: chicken breast, kimchi, asparagus, egg, rice, garlic, salt and pepper.
+					<br>
+					<br>
+					1. Cut chicken into small cubes, marinate in salt, pepper for 2 to 3 hours.
+					<br>
+					<br>
+					2. Heat oil in a non-sticky pan to medium heat, add minced garlic and chicken cubes, stir-fry until the meat changes color, add kimchi and keep stir-frying for couple more minutes until fully cooked.
+					<br>
+					<br>
+					3. Pour chicken out, use the residual oil to cook asparagus and egg, season with salt and pepper.
+					<br>
+					<br>
+					4. Put everything and cooked rice in your lunch box and hope this bento will keep you energetic for a long work day.
+				</div>
+			</div>
+
+			<div class="foodPic" style="background-image: url(pic/salad.jpg)">
+				<div>
+					Salad<hr>
+					Of course you gotta have your veggies. Not my favorite thing to eat but I have a secret dressing here to make salad more delicious:
+					<br>
+					<br>
+					1 lemon and turn that into lemon juice
+					<br>
+					<br>
+					some minced garlic
+					<br>
+					<br>
+					two tbs of soy sauce
+					<br>
+					<br>
+					two tbs of sesame paste
+					<br>
+					<br>
+					some salt and pepper depending on your taste
+					<br>
+					<br>
+					some water
+					<br>
+					<br>
+					stir everything until mixed together and pour into your favorite choice of vegetables
+				</div>
+			</div>
+
+			<div class="foodPic" style="background-image: url(pic/steak.png)">
+				<div>
+					Steak<hr>
+					Cheat day! The most important part of this meal is to get some good quality meat. My favorite way to cook this is medium rare, NY strip. What else you need: some butter, garlic, rosemary, seasoning powder of your choice.
+					<br>
+					<br>
+					1. Season you meat for about 30 to 40 minutes.
+					<br>
+					<br>
+					2. Heat some olive oil in a non-sticky pan to medium heat, put meat in and cook for about 3 minutes.
+					<br>
+					<br>
+					3. Flip side, add butter on top to melt, add garlic and rosemary on the side, cook for another 3 minutes.
+					<br>
+					<br>
+					4. Voila!
+				</div>
+			</div>
+
+			<div class="foodPic" style="background-image: url(pic/ramen.png)">
+				<div>
+					Ramen<hr>
+					What is better than a bowl of hot ramen with soup in a cold snowy day? Two bowls of ramen! What you need: your favorite brand of instant noodle, some vegetables, sausages, egg, dried seaweed, chicken stock.
+					<br>
+					<br>
+					1. Add some water and chicken stock into a pot, heat to boiling.
+					<br>
+					<br>
+					2. Add your noodle pack and seasoning powder, add vegetables and sausage, add egg last if you want runny yolk.
+					<br>
+					<br>
+					3. After everything is cooked, you can add some cheese on top if you want. My finishing touch is to add some sesame oil. Pour everything out and add some dried seaweed.
+					<br>
+					<br>
+					4. Bon Appetit!
+				</div>
+			</div>
+		</div>
+
+		<footer class="foot">
+			<br>
+			By Mojin Zhang
+		</footer>
+		
+		<script>
+			var text = document.querySelectorAll(".foodPic div");
+			var previous;
+			
+			for (var i = 0; i < text.length; i++) {
+				text[i].onclick = function() {
+					var classes = this.classList;
+					if (classes.contains("show")) {
+						classes.remove("show");
+					} else {
+						if (previous != null) 
+						previous.classList.remove("show");
+						previous = this;
+						classes.add("show");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

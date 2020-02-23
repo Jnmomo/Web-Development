@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+body {
+	background-color: tan;
+	font-family: 'Inconsolata', monospace;
+}
+
+.container {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 500px);
+}
+
+@keyframes flip {
+	0% {
+		transform: rotateX(0);
+	}
+	100% {
+		transform: rotateX(-180deg);
+	}
+}
+
+.head {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row: 1fr;
+	text-align: center;
+	color: cornsilk;
+	animation: flip 2s ease-in reverse both;
+}
+
+.head h1 {
+	border: 2px solid cornsilk;
+	border-radius: 15px;
+	padding: 5px;
+}
+
+.foodPic {
+	background-size: cover;
+	background-position: center;
+	border-radius: 15px;
+	margin: 4px;
+	box-shadow: 0 0 16px cornsilk;
+	cursor: pointer;
+	position: relative;
+}
+
+.foodPic div {
+	position: absolute;
+	color: white;
+	font-size: 16px;
+	padding: 8px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 15px;
+	padding-top: 5%;
+	opacity: 0;
+	transition: .5s;
+}
+
+.foodPic div.show {
+	opacity: 1;
+	padding-top: 10%;
+}
+
+.foot {
+	display: grid;
+	grid-template-columns: 1fr;
+	text-align: center;
+	color: cornsilk;
+}
+
+@media only screen and (max-width: 1024px) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(3, 500px);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, 520px);
+	}
+}
